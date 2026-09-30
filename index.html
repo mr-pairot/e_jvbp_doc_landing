@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ระบบสารบรรณอิเล็กทรอนิกส์ | กำลังนำท่านไปยังหน้าเว็บ...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var REDIRECT_URL = "https://bpnp-document-demo.netlify.app/";
+    </script>
 
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #08080d;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .box { max-width: 420px; }
+        .loader {
+            border: 4px solid rgba(255,255,255,0.15);
+            border-top: 4px solid #0d6efd;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 20px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        p { color: rgba(255,255,255,0.75); line-height: 1.6; margin: 6px 0; }
+        a {
+            color: #4f9dff;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+    </style>
+
+    <script>
+        document.write('<link rel="canonical" href="' + REDIRECT_URL + '">');
+        document.write('<meta http-equiv="refresh" content="0; url=' + REDIRECT_URL + '">');
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="loader"></div>
+        <p>กำลังนำท่านไปยังระบบสารบรรณอิเล็กทรอนิกส์...</p>
+        <noscript>
+            <p>หากไม่ถูกนำไปยังหน้าเว็บโดยอัตโนมัติ กรุณากดลิงก์ด้านล่าง</p>
+            <p><a href="https://bpnp-document-demo.netlify.app/">bpnp-document-2026.netlify.app</a></p>
+        </noscript>
+        <p><a id="fallbackLink" href="#">กำลังโหลดลิงก์...</a></p>
+    </div>
+
+    <script>
+        var fallbackLinkEl = document.getElementById('fallbackLink');
+        fallbackLinkEl.href = REDIRECT_URL;
+        fallbackLinkEl.textContent = REDIRECT_URL;
+        window.location.replace(REDIRECT_URL);
+    </script>
+</body>
+</html>
